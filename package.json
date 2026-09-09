@@ -1,0 +1,14 @@
+{
+  "name": "kravex-studio-bot",
+  "version": "1.0.0",
+  "description": "Kravex Studio Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.24.2",
+    "dotenv": "^17.2.2"
+  }
+}
