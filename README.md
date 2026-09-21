@@ -1,2 +1,0 @@
-# Bot
-,ow9laa
