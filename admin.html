@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hadessei — Panel privado</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet"><link rel="stylesheet" href="admin.css"></head>
+<body>
+<div id="login" class="login"><div class="login-box"><div class="admin-logo">H</div><p class="tiny">PANEL PRIVADO</p><h1>Hadessei Admin</h1><p>Gestiona el contenido de tu portafolio.</p><input id="pass" type="password" placeholder="Contraseña"><button id="loginBtn">Entrar</button><small>Esta página no aparece en el menú público.</small></div></div>
+<div id="app" class="hidden">
+<header><div><span class="tiny">ADMINISTRACIÓN</span><h2>Portfolio Control</h2></div><div class="head-actions"><button id="exportBtn">Exportar config.js</button><button id="resetBtn" class="danger">Restaurar</button><button id="logoutBtn">Salir</button></div></header>
+<div class="layout"><aside>
+<button class="tab active" data-tab="general">General</button><button class="tab" data-tab="metrics">Métricas</button><button class="tab" data-tab="experience">Experiencia</button><button class="tab" data-tab="skills">Habilidades</button><button class="tab" data-tab="servers">Servidores</button><button class="tab" data-tab="contact">Contacto</button><div class="note">Los cambios se guardan en este navegador. Para publicarlos en GitHub Pages, usa <b>Exportar config.js</b> y reemplaza el archivo del proyecto.</div></aside>
+<main>
+<section class="panel active" id="general"><h1>Información principal</h1><div class="grid2"><label>Nombre<input data-key="name"></label><label>Etiqueta<input data-key="label"></label><label>Título principal<input data-key="heroTitle"></label><label>Avatar URL<input data-key="avatar"></label></div><label>Descripción principal<textarea data-key="heroText"></textarea></label><label>Título de perfil<input data-key="profileTitle"></label><label>Texto de perfil<textarea data-key="profileText"></textarea></label><label>Introducción experiencia<textarea data-key="experienceIntro"></textarea></label></section>
+<section class="panel" id="metrics"><div class="panel-title"><h1>Métricas</h1><button class="add" data-add="metrics">+ Añadir</button></div><div id="metricsEditor"></div></section>
+<section class="panel" id="experience"><div class="panel-title"><h1>Experiencia</h1><button class="add" data-add="experience">+ Añadir</button></div><div id="experienceEditor"></div></section>
+<section class="panel" id="skills"><div class="panel-title"><h1>Habilidades</h1><button class="add" data-add="skills">+ Añadir</button></div><div id="skillsEditor"></div></section>
+<section class="panel" id="servers"><div class="panel-title"><h1>Servidores</h1><button class="add" data-add="servers">+ Añadir</button></div><div id="serversEditor"></div></section>
+<section class="panel" id="contact"><h1>Contacto y Discord</h1><div class="grid2"><label>Correo<input data-key="email"></label><label>Discord<input data-key="discord"></label><label>Invitación Discord<input data-key="discordInvite"></label><label>ID de Discord<input data-key="discordUserId"></label></div><label>Texto de contacto<textarea data-key="contactText"></textarea></label><div class="publish"><b>Estado de Discord</b><p>El portafolio puede consultar la presencia mediante Lanyard usando el ID configurado. No necesitas mostrar ningún enlace al panel en la página pública.</p></div></section>
+</main></div><div id="toast"></div></div>
+<script src="config.js"></script><script src="admin.js"></script>
+</body></html>
